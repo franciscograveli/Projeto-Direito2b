@@ -11,12 +11,15 @@ export default {
 
 <template>
     <div class="content">
+        <div class="side">
+            <img src="/src/assets/img/bannerLei.png" alt="Banner Sobre a lei maria da penha">
+       </div>
        <div class="side">
           <TextModel color="blue" >
             <div class="textSlot">
                 <h1>Existe diferença de violência contra a mulher cis e a mulher trans?  </h1>
                 <p>
-                    •A violência doméstica contra mulheres cis e mulheres trans é um problema grave que envolve a agressão física, psicológica, sexual, econômica e/ou verbal direcionada a uma mulher por parte de um parceiro íntimo ou membro da família em um ambiente doméstico. A principal diferença é que mulheres trans enfrentam desafios específicos devido à discriminação de gênero e transfobia, o que torna a violência que sofrem ainda mais complexa. Muitas vezes, mulheres trans enfrentam discriminação dupla, tanto como mulheres quanto como pessoas trans, tornando-as particularmente vulneráveis a abusos.
+                    A violência doméstica contra mulheres cis e mulheres trans é um problema grave que envolve a agressão física, psicológica, sexual, econômica e/ou verbal direcionada a uma mulher por parte de um parceiro íntimo ou membro da família em um ambiente doméstico. A principal diferença é que mulheres trans enfrentam desafios específicos devido à discriminação de gênero e transfobia, o que torna a violência que sofrem ainda mais complexa. Muitas vezes, mulheres trans enfrentam discriminação dupla, tanto como mulheres quanto como pessoas trans, tornando-as particularmente vulneráveis a abusos.
                 </p>
             </div>
         </TextModel>
@@ -24,14 +27,12 @@ export default {
             <div class="textSlot">
             <h1>Reconhecer uma violência doméstica é muito importante!  </h1>
             <p>
-                •É importante reconhecer que todas as formas de violência doméstica são inaceitáveis e ilegais, e é fundamental combater essa violência, fornecer apoio às vítimas e promover a conscientização sobre os desafios específicos enfrentados por mulheres cis e trans. Além disso, leis e políticas têm sido implementadas em muitos lugares para proteger as vítimas e punir os agressores, independentemente de sua identidade de gênero.
+                É importante reconhecer que todas as formas de violência doméstica são inaceitáveis e ilegais, e é fundamental combater essa violência, fornecer apoio às vítimas e promover a conscientização sobre os desafios específicos enfrentados por mulheres cis e trans. Além disso, leis e políticas têm sido implementadas em muitos lugares para proteger as vítimas e punir os agressores, independentemente de sua identidade de gênero.
             </p>
             </div>
         </TextModel >
        </div>
-       <div class="side">
-            <img src="src/assets/img/bannerLei.png" alt="Banner Sobre a lei maria da penha">
-       </div>
+       
     </div>
 </template>
 

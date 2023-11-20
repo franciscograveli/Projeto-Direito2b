@@ -19,10 +19,9 @@ export default {
 
 <template>
     <div class="violences">
-       
         <template v-if="imgSide == 'l'">
             <div class="img flex-1" v-if="img">
-                <img :src="img" alt="">
+                <img :src="`/assets/${img}`" alt="">
             </div>
             <div class="text flex-1">
                 <slot></slot>
@@ -35,7 +34,7 @@ export default {
                 <button v-if="button" >{{ button }}</button>
             </div>
             <div class="img flex-1" v-if="img">
-                <img :src="img" alt="">
+                <img :src="`/assets/${img}`" alt="">
             </div>
         </template>
     </div>
@@ -51,26 +50,28 @@ export default {
     width: 100%;
     height: 100%;
     flex: 1 1 49% !important;
-    margin: 1rem 0rem !important;
+    margin: 1.5rem 0rem !important;
     position: relative;
     z-index: 0 !important;
+    color: var(--white);
+    transition: .5s ease all;
 }
 
 .text {
+   
     flex: 2 1 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2rem !important;
-    padding: 1rem 2rem !important;
+    padding: 1rem .5rem !important;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: .5rem;
     transition: .5s ease all;
     }
-.violences::before {
+.text::before {
   content: "";
   position: absolute;
   inset: -5px; /* control the spread */
@@ -80,7 +81,9 @@ export default {
   filter: blur(10px); /* control the blur */
 }
 .violences:hover{
+    transition: .5s ease all;
     background-color: #f0f0f0;
+    scale: 1.01;
 }
 
 .img{
@@ -95,7 +98,7 @@ export default {
     height: 100%;
 }
 img{
-    padding: 2rem !important;
+    padding: 1rem !important;
     width: 100%;
     height: 100%;
 }

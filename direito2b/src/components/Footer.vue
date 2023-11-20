@@ -12,17 +12,21 @@
         <h2>181</h2>
     </div>
     <div class="section">
-    <img src="src/assets/img/logo_faminas.png" alt="">
-    <ul @click="active" :class="{ 'active': isActive, 'img': !isActive }" id="ulFooter">
-      <template v-if="isActive">
-        <li v-for="account in instagramAccounts" :key="account" @click="abrirInstagram(account)">@{{ account }}</li>
-        <p @click="active">Fechar</p>
-      </template>
+    <img src="/src/assets/img/logo_faminas.png" alt="Logo UniFaminas" id="logo">
+    <ul @click="active" class="img" id="ulFooter">
     </ul>
+      <template>
+        <a v-for="account in instagramAccounts" :key="account" @click="abrirInstagram(account)">@{{ account }}</a>
+      </template>
     </div>
-    <div class="section">
-        <p>Direitos reservados Direito2b © 2023</p>
+    <div class="section" v-if="isActive">
+        <p v-for="account in instagramAccounts" :key="account" @click="abrirInstagram(account)">@{{ account }}</p>
     </div>
+    <div class="section column no-gap">
+    <p>&copy; 2023 Direito2b. Todos os direitos reservados.</p>
+    <p>Desenvolvido por <span id="author">Francisco Graveli</span></p>
+  </div>
+
     
   </footer>
 </template>
@@ -30,16 +34,7 @@
 <script>
 export default {
   name: 'Footer',
-  watch: {
-    isActive(newValue) {
-      var ul = document.getElementById("ulFooter");
-      if (newValue) {
-        ul.classList.add("active");
-      } else {
-        ul.classList.remove("active");
-      }
-    }
-  },
+ 
   data() {
     return {
       isActive: false,
@@ -73,12 +68,20 @@ export default {
   },
   mounted() {
     this.ascInstagram();
+
+    document.getElementById("logo").addEventListener("click", () => {
+      window.open(` https://www.unifaminas.edu.br/conteudo/detalhe/8`, "_blank");
+    });
+    document.getElementById("author").addEventListener("click", () => {
+    window.open('https://www.linkedin.com/in/francisco-carlos-609192142/', '_blank');
+});
+
     
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 * {
   transition: 0.5s ease all;
   color: var(--color-background);
@@ -126,16 +129,24 @@ img:hover {
   transform: translate(0, -5px);
   scale: 1.01;
 }
+li{
+  color: black !important;
+}
 
 li:hover{
   transition: 0.5s ease all;
   animation: trans-color 3s infinite;
 }
 p {
+  font-size: 0.8rem;
+  text-align: center;
     color: #ddd;
 }
+
 p:hover{
-    color: red;
+  transition: 0.5s ease all;
+  animation: trans-color 3s infinite;
+  cursor: pointer;
 }
 
 h2{
@@ -143,11 +154,7 @@ h2{
     color: white;
 }
 
-ul a {
-  color: white;
-}
-
-a:hover {
+li:hover, span:hover {
   text-decoration: underline;
   text-underline-position: 1rem;
   animation: trans-color 3s infinite;
@@ -167,7 +174,7 @@ a:hover {
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.199);
 }
 .img {
-  background-image: url('src/assets/img/instagram.png');
+  background-image: url('/src/assets/img/instagram.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -182,6 +189,9 @@ a:hover {
 }
 .no-gap{
     gap: 0;
+}
+.column{
+    flex-direction: column;
 }
 /* animation */
 @keyframes trans-color {

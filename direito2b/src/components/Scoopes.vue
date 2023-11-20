@@ -9,23 +9,18 @@
             </p>
       </swiper-slide>
       <swiper-slide>
-            <h1>Âmbito Doméstico:</h1>
+            <h1>Âmbito Famíliar:</h1>
             <p>
-                O âmbito doméstico refere-se ao ambiente da casa ou residência onde as pessoas convivem. A violência doméstica que ocorre nesse contexto envolve agressões e maus-tratos que têm lugar dentro do ambiente doméstico, independentemente dos laços de parentesco ou afetivos entre as pessoas envolvidas. Isso pode incluir, por exemplo, violência entre cônjuges, parceiros de vida ou companheiros de moradia.
+             O âmbito familiar amplia o escopo da violência doméstica para incluir não apenas as relações íntimas, mas também as relações familiares, abrangendo parentes consanguíneos (ligados por laços de sangue) e parentes afins (ligados por casamento ou união estável). Assim, a violência familiar pode envolver agressões entre pais e filhos, entre irmãos, entre cônjuges e outros parentes próximos. As legislações de muitos países também contemplam a proteção contra a violência familiar.
             </p>
       </swiper-slide>
       <swiper-slide>
-            <h1>Âmbito Doméstico:</h1>
+            <h1>Âmbito de Relacionamento de Afeto:</h1>
             <p>
-                O âmbito doméstico refere-se ao ambiente da casa ou residência onde as pessoas convivem. A violência doméstica que ocorre nesse contexto envolve agressões e maus-tratos que têm lugar dentro do ambiente doméstico, independentemente dos laços de parentesco ou afetivos entre as pessoas envolvidas. Isso pode incluir, por exemplo, violência entre cônjuges, parceiros de vida ou companheiros de moradia.
+            O âmbito de relacionamento de afeto vai além dos laços familiares tradicionais e abrange qualquer tipo de relacionamento íntimo e afetivo, independentemente do status legal ou biológico. Isso engloba relacionamentos entre cônjuges, parceiros de vida, namorados, ex-parceiros, amantes e outros relacionamentos afetivos que não necessariamente têm um vínculo familiar estrito. A violência nesse contexto pode ser denominada violência de gênero e é abordada por leis e políticas que buscam prevenir e punir a violência doméstica em qualquer tipo de relacionamento de afeto.
             </p>
       </swiper-slide>
-      <swiper-slide>
-            <h1>Âmbito Doméstico:</h1>
-            <p>
-                O âmbito doméstico refere-se ao ambiente da casa ou residência onde as pessoas convivem. A violência doméstica que ocorre nesse contexto envolve agressões e maus-tratos que têm lugar dentro do ambiente doméstico, independentemente dos laços de parentesco ou afetivos entre as pessoas envolvidas. Isso pode incluir, por exemplo, violência entre cônjuges, parceiros de vida ou companheiros de moradia.
-            </p>
-      </swiper-slide>
+     
     </swiper>
   </div>
 </template>

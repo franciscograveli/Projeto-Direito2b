@@ -16,38 +16,28 @@ export default {
 </script>
 
 <template>
-    
-    <div class="text" v-if="backgroudColor == 'blue'" 
-    style="
-     background: rgb(91,206,250);
-    background: -moz-linear-gradient(344deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    background: -webkit-linear-gradient(344deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    background: linear-gradient(344deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    ">
+   
+    <div class="text" v-if="backgroudColor == 'blue'">
         <slot></slot>
         <button v-if="button" >{{ button }}</button>
     </div>
     <div v-if="backgroudColor == 'blue-r'"  class="text"
-        style="
-        background: rgb(91,206,250);
-    background: -moz-linear-gradient(140deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    background: -webkit-linear-gradient(140deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    background: linear-gradient(140deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    ">
+        >
         <slot></slot>
         <button v-if="button" >{{ button }}</button>
     </div>
-    <div v-if="backgroudColor == 't'"  class="text"
-        style="
-        background-color: red;
-        ">
+    <div v-if="backgroudColor == 't'"  class="text">
         <slot></slot>
         <button v-if="button" >{{ button }}</button>
     </div>
+   
+    
 </template>
 
 <style scoped>
+
 .text {
+     color: var(--white) !important;
     max-width: 95vw;
     width: 100%;
     display: flex;
@@ -61,15 +51,20 @@ export default {
     font-weight: bold;
     border-radius: .5rem;
     transition: .5s ease all;
-    background: rgb(91,206,250);
-    background: -moz-linear-gradient(344deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    background: -webkit-linear-gradient(344deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    background: linear-gradient(344deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5bcefa",endColorstr="#f5a9b8",GradientType=1);
+    position: relative;
+    z-index: 1;
     }
+.text::before {
+    content: "";
+  position: absolute;
+  inset: -5px; /* control the spread */
+  z-index: -1; /* place the element behind */
+  background: linear-gradient(140deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 100%);
+  filter: blur(10px); /* control the blur */
+}
 .text:hover{
     transition: .3s ease all;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.13);
+    scale: 1.01;
 }
 button{
     border-style: none;

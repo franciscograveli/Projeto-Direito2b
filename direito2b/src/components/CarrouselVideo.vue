@@ -1,27 +1,16 @@
 <template>
 
   <div class="carrousel d-flex-center">
-    <swiper :pagination="pagination" :modules="modules" class="mySwiper">
-      <swiper-slide>
+    <swiper :pagination="pagination" :modules="modules" class="mySwiper" v-if="videos">
+      <swiper-slide v-for="video in videos" :key="video">
+            <iframe allow="autoplay;" allowfullscreen style="border:none" :src="video" ></iframe>
+      </swiper-slide>
+     
+      <!-- <swiper-slide>
         <video controls ="auto" playsinline>
           <source src="src/assets/video/frag_bunny.mp4" type="video/mp4">
         </video>
-      </swiper-slide>
-      <swiper-slide>
-        <video controls ="auto" playsinline>
-          <source src="src/assets/video/frag_bunny.mp4" type="video/mp4">
-        </video>
-      </swiper-slide>
-      <swiper-slide>
-        <video controls ="auto" playsinline>
-          <source src="src/assets/video/frag_bunny.mp4" type="video/mp4">
-        </video>
-      </swiper-slide>
-      <swiper-slide>
-        <video controls ="auto" playsinline>
-          <source src="src/assets/video/frag_bunny.mp4" type="video/mp4">
-        </video>
-      </swiper-slide>
+      </swiper-slide> -->
     </swiper>
     <span>Entrevistas realizadas pelos alunos do 2° período de direito, Universidade Faminas-MG, em Senador Vasconcelos-RJ com Andréa Brazil, 08/10/2023.</span>
   </div>
@@ -38,6 +27,16 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  data() {
+    return {
+      videos: [
+        'https://clipchamp.com/watch/PSBnulDCo1y/embed',
+        'https://clipchamp.com/watch/aWy6J0zNhuo/embed',
+        'https://clipchamp.com/watch/XtXRqvyhMDu/embed',
+        'https://clipchamp.com/watch/uO7SvTy5v69/embed',
+      ]
+    }
   },
   setup() {
     return {
@@ -71,7 +70,6 @@ span{
   z-index: 1;
   width: 100%;
   height: 100%;
-  min-height: 50vh;
   padding: 1rem 2rem !important;
 }
 
@@ -83,8 +81,6 @@ span{
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  width: 100%;
-  height: 100%;
 
   /* Center slide text vertically */
   display: flex;
@@ -92,11 +88,24 @@ span{
   align-items: center;
 }
 
-.swiper-slide video {
+.swiper-slide iframe {
+  height: 100%;
   max-width: 1000px;
-  width: 100%;
   border-radius: .5rem;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.356);
+  background-color: transparent !important;
+}
+@media (min-width: 768px) {
+  .swiper-slide iframe {
+    min-height: 70vh;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.356);
+    background-color: transparent !important;
+  }
+  
 }
 
 .swiper-pagination-bullet {

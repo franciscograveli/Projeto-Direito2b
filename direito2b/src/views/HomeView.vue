@@ -2,6 +2,7 @@
 import Header from '@/components/Header.vue';
 import ContentHome from '@/components/ContentHome.vue';
 import CarrouselVideo from '@/components/CarrouselVideo.vue';
+import Law from '@/components/Law.vue';
 
 </script>
 
@@ -9,6 +10,7 @@ import CarrouselVideo from '@/components/CarrouselVideo.vue';
   <div class="home">
   <Header text="Violência doméstica contra as mulheres trans: A concepção de violência doméstica e familiar da Lei Maria
     da Penha e o alcance trazido no texto normativo." />
+    <Law />
   <CarrouselVideo /> 
   <ContentHome/>
   </div>

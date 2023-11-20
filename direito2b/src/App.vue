@@ -26,9 +26,28 @@ import Footer from '@/components/Footer.vue';
   --pink: #F5A9B8;
   --white: white;
 }
+@font-face {
+  font-family: 'inter-bold';
+  src: url('./assets/fonts/static/Inter-Bold.ttf');
+}
+@font-face {
+  font-family: 'inter';
+  src: url('./assets/fonts/static/Inter-regular.ttf');
+}
 *{
   margin: 0 !important;
   padding: 0 !important;
+  font-family: 'inter' ,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+body{
+  overflow-x: hidden;
+}
+h1{
+  font-family: 'inter-bold' !important;
+}
+p, h1{
+  text-align: center !important;
 }
 #app{
   margin: 0 !important;
@@ -42,12 +61,7 @@ import Footer from '@/components/Footer.vue';
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-
-  /* background: rgb(91,206,250);
-  background: -moz-linear-gradient(180deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 25%, rgba(255,255,255,1) 50%, rgba(245,169,184,1) 75%, rgba(91,206,250,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 25%, rgba(255,255,255,1) 50%, rgba(245,169,184,1) 75%, rgba(91,206,250,1) 100%);
-  background: linear-gradient(180deg, rgba(91,206,250,1) 0%, rgba(245,169,184,1) 25%, rgba(255,255,255,1) 50%, rgba(245,169,184,1) 75%, rgba(91,206,250,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5bcefa",endColorstr="#5bcefa",GradientType=1); */
+  
 }
 .wrapper{
   width: 100%;
